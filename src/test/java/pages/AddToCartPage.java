@@ -22,6 +22,9 @@ public class AddToCartPage {
     @FindBy(xpath = "//button[@class='QqFHMw vslbG+ In9uk2 JTo6b7']")
     WebElement cartClick;
     
+    @FindBy(xpath = "//button[@class='QqFHMw vslbG+ In9uk2']")
+    WebElement cartClickAlt;
+//    
     public void addToCart()
     {
     	try
@@ -29,7 +32,9 @@ public class AddToCartPage {
     		re.clickElement(cartClick);
     	}catch(Exception e)
     	{
-    		System.out.println("Cannot click add to cart button");
+    		re.clickElement(cartClickAlt);
+
+//    		System.out.println("Cannot click add to cart button");
     	}
     }
 }
