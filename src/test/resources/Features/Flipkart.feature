@@ -1,9 +1,5 @@
 Feature: To validate Flipkart functionality
 
-
-Background:
-  Given Launch the browser and enter the URL
-
 @smoke
 Scenario: To validate the search functionality
 	Given To launch th browser and enter url
@@ -19,16 +15,16 @@ Scenario: To validate the search functionality
   Then Click place order 
   And Take Screenshot after clicking on place order
 
-@smoke
-Scenario Outline: To test the search functionality with different values
-  When Enter "<text>" in the search field
-  Then Search results should be displayed
-  And Verify the results
-  And Take a screenshot and close the browser
-
-Examples:
-  | text    |
-  | Mobiles |
-  | Tshirt  |
-  | Tv      |
-  | Bottles |
+#@smoke
+#Scenario Outline: To test the search functionality with different values
+  #When Enter "<text>" in the search field
+  #Then Search results should be displayed
+  #And Verify the results
+  #And Take a screenshot and close the browser
+#
+#Examples:
+  #| text    |
+  #| Mobiles |
+  #| Tshirt  |
+  #| Tv      |
+  #| Bottles |

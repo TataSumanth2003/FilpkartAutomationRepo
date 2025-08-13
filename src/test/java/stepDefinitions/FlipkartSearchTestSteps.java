@@ -43,9 +43,7 @@ public class FlipkartSearchTestSteps extends LibraryClass{
     	
 		@When("Enter text in the Search field")
 		public void enter_text_in_the_search_field() {
-	    	System.out.println("*******************************************************************3");
 			search.search("Mobiles");
-	    	System.out.println("*******************************************************************4");
 			logger.info("Searched Mobiles");
 
 		}

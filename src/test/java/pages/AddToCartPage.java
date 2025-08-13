@@ -19,7 +19,7 @@ public class AddToCartPage {
         re = new ResuabilityClass(driver);
     }
     
-    @FindBy(xpath = "//button[@class='QqFHMw vslbG+ In9uk2']")
+    @FindBy(xpath = "//button[@class='QqFHMw vslbG+ In9uk2 JTo6b7']")
     WebElement cartClick;
     
     public void addToCart()

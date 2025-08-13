@@ -35,7 +35,7 @@ public class LibraryClass {
     // Initialize browser based on config
     public static void initializeBrowser() {
         loadConfig();
-        String executionType = config.getProperty("executionType", "sauce"); // local or sauce
+        String executionType = config.getProperty("executionType"); // local or sauce
         String browser = config.getProperty("browser", "chrome");
         int implicitWait = Integer.parseInt(config.getProperty("implicitWait", "10"));
 
@@ -43,10 +43,8 @@ public class LibraryClass {
         String sauceUser = "oauth-tatasumanth2003-fa806";
         String sauceKey = "4c88c651-41a9-4270-80c4-55a48a8d2579";
         boolean canRunSauce = sauceUser != null && sauceKey != null;
-        System.out.println(canRunSauce+"________________________________________________________________________________________________");
 
         if (executionType.equalsIgnoreCase("sauce") && canRunSauce) {
-        	System.out.println("--------------------------------------------------------------------------------------running");
             runOnSauce(browser, sauceUser, sauceKey);
         } else {
             if (executionType.equalsIgnoreCase("sauce") && !canRunSauce) {
@@ -84,7 +82,6 @@ public class LibraryClass {
             // Sauce Labs EU-Central-1 URL
             String sauceURL = "https://" + sauceUser + ":" + sauceKey +
                     "@ondemand.eu-central-1.saucelabs.com/wd/hub";
-        	System.out.println("-------------------------------------------------------------------------------------- saurceURL success");
 
             // Desired capabilities
             DesiredCapabilities caps = new DesiredCapabilities();

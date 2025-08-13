@@ -25,7 +25,6 @@ public class FlipkartResultPage {
     public void firstResult()
     {
     	try {
-    		System.out.println(driver.findElement(By.xpath("//div[@class='DOjaWF gdgoEp']/div[2]/div/div/div/a/div[3]/div/div")).getText()+"^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^");
             re.windowHandling(firstClickXPath);
         } catch (Exception e) {
             System.out.println("First search not interactable.");
